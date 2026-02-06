@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specially crafter tea</title>
+    <link
+      rel="icon"
+      href="https://www.bing.com/th/id/OIP.0TdeDB475tJUz_oFZmtpxwHaF6?w=233&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+      type="image/png"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+      }
+      nav {
+        text-align: center;
+        width: 100%;
+      }
+      nav ul li {
+        font-size: 13px;
+        display: inline-block;
+        padding: 18px;
+        transition: 0.4s;
+        
+      }
+      nav ul li:hover {
+        font-weight: bold;
+        background: rgb(117, 215, 166);
+      }
+      .main-header {
+        width: 100%;
+
+        height: 300px;
+        text-align: center;
+        padding-top: 10%;
+        background:
+          linear-gradient(to bottom, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.2)),
+          url(https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg)
+            center/cover;
+      }
+      .main-contents {
+        color: white;
+      }
+      .main-contents button {
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-weight: bold;
+        border-radius: 50px;
+        border: none;
+        margin: 7px;
+        background: linear-gradient(
+          to left,
+          rgb(117, 210, 117),
+          rgb(89, 89, 206)
+        );
+
+        transition: 0.4s;
+      }
+      .main-contents button:hover {
+        width: 120px;
+      }
+      body {
+        position: relative;
+      }
+      .menu-icon {
+        background: white;
+        font-size: 30px;
+        position: fixed;
+        border-radius: 7px;
+        top: 30px;
+        left: 20px;
+      }
+      .left-menu {
+        position: fixed;
+        background: white;
+        width: 50%;
+
+        height: 100vh;
+        display: none;
+        box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.4);
+      }
+
+      .left-menu ul {
+        list-style: none;
+      }
+
+      .left-menu i {
+        font-size: 30px;
+        color: rgb(255, 94, 94);
+      }
+
+      .left-menu li {
+        padding: 10px;
+        font-weight: bold;
+        transition: 0.4s;
+        
+      }
+
+      .left-menu li:hover {
+        transform: translateX(20px);
+        color: green;
+      }
+      .title {
+        text-align: center;
+        height: 30px;
+        margin-top: 10px;
+      }
+
+      /* Features */
+      .features {
+        width: 100%;
+        height: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border: none;
+      }
+      .features div {
+        text-align: center;
+
+        padding: 20px;
+        font-size: 13px;
+      }
+      .features h3 {
+        color: green;
+      }
+      .features div:hover {
+        background-color: rgb(141, 219, 141);
+      }
+
+      /* about */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .about div:last-child {
+        padding: 30px;
+      }
+      .about div:first-child {
+        padding: 5px;
+        background: linear-gradient(
+          to left,
+          rgb(117, 210, 117),
+          rgb(89, 89, 206)
+        );
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .about button {
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-weight: bold;
+        margin: 7px;
+        border: none;
+        border-radius: 90px;
+        background: linear-gradient(
+          to left,
+          rgb(117, 210, 117),
+          rgb(89, 89, 206)
+        );
+      }
+      .about image {
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.3;
+      }
+      .about img:hover {
+      }
+
+      /* product */
+      .products {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        background: linear-gradient(
+          to left,
+          rgb(117, 210, 117),
+          rgb(89, 89, 206)
+        );
+      }
+      .products div {
+        padding: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+      }
+      .products button {
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        background: linear-gradient(
+          to left,
+          rgb(117, 210, 117),
+          rgb(89, 89, 206)
+        );
+      }
+      .products img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      /* services */
+      .services {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .services div {
+        text-align: center;
+        overflow: 
+        hidden;
+        background: rgb(0,129,49);
+        color: white;
+        margin: 10px;
+        border-radius: 25px;
+        border: 5px rgb(0,129,49) solid;
+      }
+      .services img {
+        width: 100%;
+      }
+      .services button {
+        width: 100px;
+        height: 30px;
+        background: rgb(0,129,49);
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        border: 2px rgb(255, 255, 255) solid;
+      }
+
+      /* contact */
+      .contact {
+        background: rgb(27, 26, 26);
+        color: white;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-icon">
+      <i class="bx bx-menu open-menu-icon"></i>
+    </div>
+    <div class="left-menu">
+      <i class="bx bx-x disable-menu"></i>
+      <ul>
+        <li>FEATURES</li>
+        <li>ABOUT</li>
+        <li>PRODUCTS</li>
+        <li>SERVICES</li>
+        <li>CONTACTS</li>
+      </ul>
+    </div>
+    <nav>
+      <ul>
+        <li>ABOUT</li>
+        <li>PRODUCT</li>
+        <li>FEATURES</li>
+        <li>SERVICES</li>
+        <li>CONTACT</li>
+      </ul>
+    </nav>
+    <div class="main-header">
+      <div class="main-contents">
+        <p>Over one hundred flavors of tea</p>
+        <h3>SPECIALLY CRAFTER TEA</h3>
+        <button>EXPLORE</button>
+      </div>
+    </div>
+
+    <!-- features -->
+    <h3 class="title">FEATURE</h3>
+    <div class="features">
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+          quaerat sed beatae, ad libero architecto neque facilis fugiat illum
+          accusamus debitis nemo id maiores!
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          ducimus inventore incidunt odio tenetur natus, earum sit quis odit
+          sequi ea necessitatibus voluptatum rem pariatur hic impedit! Commodi
+          illo, corrupti laudantium voluptatem quasi aliquam, incidunt minus
+          sapiente vero molestias eligendi?
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, eligendi!
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum commodi
+          unde tenetur porro voluptate doloribus perspiciatis nobis, nulla non
+          vitae quis explicabo, in earum. Fugit, cumque velit. Dolorum, sed?
+          Voluptatum!
+        </p>
+      </div>
+    </div>
+
+    <!-- About -->
+
+    <h3 class="title">ABOUT</h3>
+    <div class="about">
+      <div>
+        <img
+          width="400px"
+          src="https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg"
+        />
+      </div>
+      <div>
+        <h3>About our</h3>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id tempore
+          quia debitis, ea quas praesentium nobis commodi exercitationem. Amet,
+          maiores!
+        </p>
+        <button>Read more</button>
+      </div>
+    </div>
+
+    <!-- Products -->
+
+    <h3 class="title">PRODUCTS</h3>
+
+    <div class="products">
+      <div>
+        <h5>CHECK OUT</h5>
+        <h3>OUR PRODUCTS</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa enim,
+          assumenda labore obcaecati ullam quis. Iste distinctio sapiente
+          corrupti? Accusamus doloremque temporibus nesciunt blanditiis autem
+          ab, beatae hic voluptate alias.
+        </p>
+        <button>Check out</button>
+      </div>
+      <div>
+        <img
+          width="100px"
+          src="https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg"
+        />
+        <h4>Tea</h4>
+        <h5>99$</h5>
+      </div>
+      <div>
+        <img
+          width="100px"
+          src="https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg"
+        />
+        <h4>Tea</h4>
+        <h5>99$</h5>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+
+    <h3 class="title">SERVICES</h3>
+    <div class="services">
+      <div>
+        <img src="https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg"
+" alt="" />
+        <h3>DELIVERY</h3>
+        <button>Read more</button>
+      </div>
+      <div>
+        <img src="https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg"
+" alt="" />
+        <h3>DELIVERY</h3>
+        <button>Read more</button>
+      </div>
+      <div>
+        <img src="https://www.tastingtable.com/img/gallery/what-makes-hojicha-green-tea-unique/l-intro-1671107165.jpg"
+" alt="" />
+        <h3>DELIVERY</h3>
+        <button>Read more</button>
+      </div>
+    </div>
+
+    <!-- Contact -->
+
+    <h3 class="title">Contact us</h3>
+    <div class="contact">
+      <div>
+        <h3>Address</h3>
+        <p>FPT Polytechnic, Quang Thanh, Thanh Hoa</p>
+
+        <h3>Email</h3>
+        <p>abcxyz@gmail.com</p>
+
+        <h3>Telephone</h3>
+        <p>+84123456789</p>
+      </div>
+      <div>
+        <form action="">
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="message" name="" id=""></textarea>
+        </form>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script>
+      var disableIcon = document.querySelector(".disable-menu");
+      var leftMenu = document.querySelector(".left-menu");
+      var openMenuIcon = document.querySelector(".open-menu-icon");
+
+      disableIcon.addEventListener("click", function () {
+        console.log("ok");
+        leftMenu.style.display = "none";
+      });
+
+      openMenuIcon.addEventListener("click", function () {
+        leftMenu.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
